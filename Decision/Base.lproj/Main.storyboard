@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZpW-uf-vQd">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="cMA-TD-gub">
+            <objects>
+                <navigationController id="ZpW-uf-vQd" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uoT-oy-85S">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="CRD-ly-d7Q" kind="relationship" relationship="rootViewController" id="8YG-Cn-PX0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H0R-Fh-hkd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-560" y="-195"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7QL-TR-PO5">
+            <objects>
+                <viewController id="CRD-ly-d7Q" customClass="ViewController" customModule="Decision" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KAZ-bh-yX5">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your options" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMJ-aS-YBZ">
+                                <rect key="frame" x="62" y="103" width="269" height="39.333333333333343"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Text" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fgo-sw-aTS">
+                                <rect key="frame" x="85" y="177.33333333333334" width="240" height="34"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="P9M-Ds-G5u">
+                                <rect key="frame" x="85" y="241" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfn-Ab-Mkl">
+                                <rect key="frame" x="258" y="409" width="108" height="35"/>
+                                <color key="backgroundColor" red="0.31377251160000003" green="0.57723620399999997" blue="0.99215686319999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add option"/>
+                                <connections>
+                                    <action selector="addTextButton:" destination="CRD-ly-d7Q" eventType="touchUpInside" id="MPw-Lt-VXA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ds7-JR-ieQ">
+                                <rect key="frame" x="53" y="409" width="126" height="35"/>
+                                <color key="backgroundColor" red="0.31377251160000003" green="0.57723620399999997" blue="0.99215686319999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Delete option"/>
+                                <connections>
+                                    <action selector="deleteTextButton:" destination="CRD-ly-d7Q" eventType="touchUpInside" id="n3m-o4-j1U"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="H8O-FR-ye1">
+                                <rect key="frame" x="85" y="560" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezr-U5-Bdi">
+                                <rect key="frame" x="93" y="746" width="206" height="44"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="RANDOMISE!">
+                                    <fontDescription key="titleFontDescription" name="Palatino-Roman" family="Palatino" pointSize="27"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="randomise:" destination="CRD-ly-d7Q" eventType="touchUpInside" id="FyB-4n-cjY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="d9r-dE-gqE"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="Fgo-sw-aTS" firstAttribute="top" secondItem="LMJ-aS-YBZ" secondAttribute="bottom" constant="35" id="17c-u9-NfC"/>
+                            <constraint firstItem="d9r-dE-gqE" firstAttribute="bottom" secondItem="Vfn-Ab-Mkl" secondAttribute="bottom" constant="374" id="1ER-t8-wjb"/>
+                            <constraint firstItem="LMJ-aS-YBZ" firstAttribute="top" secondItem="d9r-dE-gqE" secondAttribute="top" id="1hR-YX-XR6"/>
+                            <constraint firstItem="LMJ-aS-YBZ" firstAttribute="leading" secondItem="d9r-dE-gqE" secondAttribute="leading" constant="62" id="8Sx-SJ-xLP"/>
+                            <constraint firstItem="d9r-dE-gqE" firstAttribute="trailing" secondItem="Fgo-sw-aTS" secondAttribute="trailing" constant="68" id="D56-KX-Jrx"/>
+                            <constraint firstItem="ds7-JR-ieQ" firstAttribute="leading" secondItem="d9r-dE-gqE" secondAttribute="leading" constant="53" id="Gck-K6-cOT"/>
+                            <constraint firstItem="d9r-dE-gqE" firstAttribute="trailing" secondItem="LMJ-aS-YBZ" secondAttribute="trailing" constant="62" id="JXi-mA-uFF"/>
+                            <constraint firstItem="d9r-dE-gqE" firstAttribute="trailing" secondItem="Vfn-Ab-Mkl" secondAttribute="trailing" constant="27" id="NDJ-eK-qau"/>
+                            <constraint firstItem="Vfn-Ab-Mkl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ds7-JR-ieQ" secondAttribute="trailing" constant="8" symbolic="YES" id="Wmo-pd-axg"/>
+                            <constraint firstItem="d9r-dE-gqE" firstAttribute="trailing" secondItem="Ezr-U5-Bdi" secondAttribute="trailing" constant="94" id="XQf-Jb-IOA"/>
+                            <constraint firstItem="d9r-dE-gqE" firstAttribute="bottom" secondItem="ds7-JR-ieQ" secondAttribute="bottom" constant="374" id="aX5-F2-qyk"/>
+                            <constraint firstItem="d9r-dE-gqE" firstAttribute="bottom" secondItem="Ezr-U5-Bdi" secondAttribute="bottom" constant="28" id="aaV-xP-XqJ"/>
+                            <constraint firstItem="Ezr-U5-Bdi" firstAttribute="leading" secondItem="d9r-dE-gqE" secondAttribute="leading" constant="93" id="jxv-Lv-7JG"/>
+                            <constraint firstItem="Fgo-sw-aTS" firstAttribute="leading" secondItem="d9r-dE-gqE" secondAttribute="leading" constant="85" id="k91-gu-9FR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KIS-aJ-Ax6"/>
+                    <connections>
+                        <outlet property="TextField01" destination="Fgo-sw-aTS" id="cKm-Xk-A98"/>
+                        <outlet property="TextView" destination="P9M-Ds-G5u" id="Xe3-Ou-rKD"/>
+                        <outlet property="textView02" destination="H8O-FR-ye1" id="UIO-qS-EHQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NjT-Tt-PlA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258.77862595419845" y="-195.07042253521126"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
